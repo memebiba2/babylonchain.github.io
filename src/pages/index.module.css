@@ -6,27 +6,31 @@
 .heroBanner {
   display: flex;
   justify-content: center;
-  /* padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden; */
+  align-items: center; /* Add center alignment for better vertical centering */
+  position: relative; /* Ensure the container is positioned for any absolute positioning */
+  overflow: hidden; /* Keep this as it was commented out, useful for potential content overflow */
+  padding: 4rem 0; /* Default padding for large screens */
 }
 
+/* Media query for smaller screen sizes */
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 2rem; /* Reduced padding for smaller screens */
   }
 }
 
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: flex-start; /* More explicit than 'left' */
 }
+
 [data-theme='dark'] .hero_title {
-  color: rgb(255, 255, 255);
+  color: #fff; /* Hex color for better consistency */
 }
+
 .img_home {
-  justify-content: right;
-  width: 50%;
+  width: 50%; /* Ensure the width is explicitly defined */
+  justify-content: flex-end; /* More explicit than 'right', ensuring better alignment */
+  display: flex; /* Ensure flexbox is working correctly with the justify-content */
 }
